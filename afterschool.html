@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        background-image: url("winter.jpg");
+    }
+</style>
+
+
+
+<!-- ALERT VERSION MUST BE CREATED ON THIS COPY, DISPLAY.HTML WILL NOT HAVE-->
+
+
+<body onload="initClock()">
+
+    <div class = "marquee">
+        <!-- marquee should drop down and stay for 5 seconds, then move off-->
+        <marquee id="currentMARQUEE">Sign up for the FHS Junior Prom during lunch waves. Tickets are going fast!</marquee>
+        <!-- should check if there is another message, and if so, displays that-->
+    </div>
+
+    <div class = "clock_Afterschool">
+        <div class = "timeAfterschool">
+            <span id = "hour">9</span>:
+            <span id = "minute">55</span>:
+            <span id = "second">22</span>
+        </div>
+        <div class = "dateAfterschool">
+            <span id = "day">WEDNESDAY</span>,
+            <span id = "month">JANUARY</span>
+            <span id = "daynum">22</span>,
+            <span id = "year">2022</span>
+        </div>
+    </div>
+    <img src = "riverhawklogo.png" id = "logoAfterschool"></img>
+
+
+    <script type="text/javascript">
+
+        function updateClock(){
+            var now = new Date();
+            var dayname = now.getDay() -1,
+                moname = now.getMonth(),
+                dname = now.getDate(),
+                yr = now.getFullYear(),
+                hour = now.getHours(),
+                minute = now.getMinutes(),
+                second = now.getSeconds();
+            
+            // allows you to add more than one digit to the clock, such as 01 for 1 second.
+            Number.prototype.pad = function(digits){
+                for (var n=this.toString(); n.length < digits; n =0 + n);
+                return n;
+            }
+            
+            // military time fix
+            if (hour > 12){
+                var hourdifference = hour - 12;
+                hour = hourdifference;
+            }
+            else if (hour < 0){
+                hour =hourdifference + 12;
+            }
+
+            // assigns values to the corresponding variable for users.
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var ids = ["hour", "minute", "second", "month", "daynum", "year", "day"];
+            var values = [hour.pad(2), minute.pad(2), second.pad(2), months[moname], dname, yr, week[dayname]];
+            for (var i = 0; i < ids.length; i++)
+            document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+        }
+        
+        // updates clock every second accordingly!
+        function initClock(){
+            updateClock();
+            window.setInterval("updateClock()", 1);
+        }
+        
+    </script>
+</body>
+<!-- https://www.youtube.com/watch?v=paiI1N96EpQ
+
+date and time tutorial, so we aren't literally having a set time and day and all-->
+</html>

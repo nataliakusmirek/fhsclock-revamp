@@ -1,0 +1,193 @@
+#currentMARQUEE{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    color: rgb(140, 70, 70);
+    font-size: 30px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+}
+@media screen and (max-width: 739px) {
+    #default{
+        //css rules for smaller screens
+    }
+}
+@media screen and (min-width: 740px) {
+    #default{
+        // css rules for BIG screens
+        .clock_Test {
+            width: 600px;
+            height: 400px;
+            left: 900px;
+            top: 200px;
+            background-color: rgb(0, 0, 0, 0.5); 
+            border-radius: 20px;
+            position: absolute;
+            color: white;
+            font-family: 'League Spartan', sans-serif;
+            display: inline-block;
+            transition: 0.5s;
+            transition-property: background-color, box-shadow;
+    }
+
+    #schedule {
+        font-family: 'League Spartan', sans-serif;
+        font-weight: bold;
+        display: block;
+        width: 480px;
+        height: 630px;
+        padding: 5px;
+        background-color: rgb(0, 0, 0, 0.6); 
+        border-radius: 20px;
+        position: absolute;
+        text-align: left;
+        color: white;
+        font-size: 30px;
+        margin-left: 180px;
+        top: 100px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+    
+    }
+}
+#schedule {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    display: block;
+    width: 480px;
+    height: 630px;
+    padding: 5px;
+    background-color: rgb(0, 0, 0, 0.6); 
+    border-radius: 20px;
+    position: absolute;
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    margin-left: 120px;
+    top: 80px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+
+}
+
+#line {
+    display: inline-flex;
+    margin-top: 5px;
+    margin-left: 30px;
+
+}
+
+#linecurrent {
+    display: inline-flex;
+    margin-top: 0px;
+    opacity: 100;
+    border-radius: 10px;
+    background-color: rgba(199, 69, 69, 0.5); 
+    color: rgb(238, 194, 194);
+    margin-bottom: 0;
+    margin-left: 30px;
+    box-shadow: 0 0 30px #e3747499;
+    
+}
+
+#period {
+    display: inline-flex;
+    margin-top: 0.1px;
+    margin-left: 15px;
+    margin-right: 15px;  
+}
+
+.clock_Test {
+    width: 620px;
+    height: 400px;
+    left: 800px;
+    top: 200px;
+    background-color: rgb(0, 0, 0, 0.5); 
+    border-radius: 20px;
+    position: absolute;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    display: inline-block;
+    text-align: center;
+    transition: 0.5s;
+    transition-property: background-color, box-shadow;
+}
+.clock_Test:hover{
+    background-color: #d73e3e99; 
+    border-color: white;
+    box-shadow: 0 0 30px #40202099;
+}
+
+.clock_Afterschool{
+    width: 820px;
+    height: 400px;
+    left: 380px;
+    top: 170px;
+    background-color: rgb(0, 0, 0, 0.5); 
+    border-radius: 20px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    transition: 0.5s;
+    transition-property: background-color, box-shadow;
+}
+
+.time {
+    font-size: 128px;
+    font-weight: bold;
+    font-family: LeagueBold;
+    margin-bottom: 5px;
+    margin-top: 140px;
+}
+
+.date {
+    font-size: 35px;
+    font-family: LeagueBold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.day {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 295px;
+}
+
+#logo {
+    width: 110px;
+    height: 75px;
+    margin-left: 1290px;
+    margin-top: 170px;
+    position: absolute;
+}
+
+.timeAfterschool {
+    font-size: 160px;
+    text-align: center;
+    font-weight: bold;
+    font-family: LeagueBold;
+    margin-bottom: 5px;
+    margin-top: 140px;
+}
+
+.dateAfterschool {
+    font-size: 35px;
+    font-family: LeagueBold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+
+#logoAfterschool {
+    width: 130px;
+    height: 90px;
+    margin-left: 1045px;
+    margin-top: 140px;
+    position: absolute;
+}
+
+@font-face {
+    font-family: LeagueBold;
+    src: url(LeagueSpartan-ExtraBold.ttf);
+}

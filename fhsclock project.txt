@@ -1,0 +1,12 @@
+1. display
+2. display with yellow box that IS NOT TO GENERAL PUBLIC.
+3. edit page
+	- add schedule
+		* can drag around and duplicate
+		* can edit and delete
+4. messages page
+	* can drag around, duplicate, edit, delete
+5. background page
+	* can add, upload, delete
+
+html, css, javascript? must be a universal design so any background can be used...
